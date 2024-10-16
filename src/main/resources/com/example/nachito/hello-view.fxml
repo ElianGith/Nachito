@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="20" vgap="20" style="-fx-padding: 40;"
+          fx:controller="com.example.nachito.HelloController" stylesheets="@styles.css">
+
+    <!-- Mostrar la política actual -->
+    <Label text="Política Usada:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="currentPolicyField" GridPane.rowIndex="0" GridPane.columnIndex="1" editable="false" prefWidth="100"/>
+
+    <!-- Selección de política y timer -->
+    <Label text="Política:" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+    <ComboBox fx:id="policyComboBox" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+    <Label text="Timer:" GridPane.rowIndex="0" GridPane.columnIndex="4"/>
+    <TextField fx:id="timerTextField" GridPane.rowIndex="0" GridPane.columnIndex="5"/>
+
+    <!-- Tabla de llegada de procesos -->
+    <Label text="Proc Lleg Dura" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TableView fx:id="arrivalTable" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="3" prefHeight="200" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="arrivalProcessColumn" text="Proceso"/>
+            <TableColumn fx:id="arrivalTimeColumn" text="Llegada"/>
+            <TableColumn fx:id="durationArrivalColumn" text="Duración"/>
+        </columns>
+    </TableView>
+
+    <!-- CPU y Salida -->
+    <Label text="CPU:" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+    <TextArea fx:id="cpuTextField" GridPane.rowIndex="2" GridPane.columnIndex="3" prefWidth="300" prefHeight="150" wrapText="true" editable="false"/>
+
+    <Label text="Salida:" GridPane.rowIndex="2" GridPane.columnIndex="4"/>
+    <TextArea fx:id="outputTextField" GridPane.rowIndex="2" GridPane.columnIndex="5" prefHeight="100" prefWidth="300" wrapText="true" editable="false"/>
+
+    <!-- Tabla de procesos con barra de progreso -->
+    <Label text="Tabla de Procesos:" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="6"/>
+    <TableView fx:id="processTable" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="6" prefHeight="250" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="processColumn" text="Proceso"/>
+            <TableColumn fx:id="durationColumn" text="Duración"/>
+            <TableColumn fx:id="progressColumn" text="Progreso"/>
+        </columns>
+    </TableView>
+
+    <!-- Memoria -->
+    <Label text="Memoria:" GridPane.rowIndex="5" GridPane.columnIndex="4"/>
+    <TextArea fx:id="memoryTextField" GridPane.rowIndex="5" GridPane.columnIndex="5" prefWidth="300" prefHeight="150" wrapText="true" editable="false"/>
+
+    <!-- Botones para insertar, ejecutar y reiniciar procesos -->
+    <Button text="Insertar Proceso Aleatorio" GridPane.rowIndex="6" GridPane.columnIndex="1" onAction="#addRandomProcess"/>
+    <Button text="Ejecutar Procesos" GridPane.rowIndex="6" GridPane.columnIndex="3" onAction="#executeProcesses"/>
+    <Button text="Reiniciar" GridPane.rowIndex="6" GridPane.columnIndex="5" onAction="#resetSimulation"/>
+
+</GridPane>

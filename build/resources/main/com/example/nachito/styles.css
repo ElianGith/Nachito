@@ -1,0 +1,84 @@
+/* General application background */
+.root {
+    -fx-background-color: #ffffff; /* Suave gris-azulado para el fondo */
+}
+
+/* General styles for TextField and TextArea */
+.text-field, .text-area {
+    -fx-background-color: #fef9fb; /* Fondo rosado claro */
+    -fx-border-color: #ffd1e1; /* Borde rosado */
+    -fx-border-radius: 6px;
+    -fx-padding: 6px;
+    -fx-text-fill: #3b3b3b; /* Texto gris oscuro */
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #ff8fab; /* Borde rosado más intenso cuando se enfoca */
+}
+
+/* Button styles */
+.button {
+    -fx-background-color: linear-gradient(#ffbad2, #ff8fab); /* Degradado rosado */
+    -fx-text-fill: white;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 16px;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#ff8fab, #ff6496); /* Color más intenso al pasar el cursor */
+}
+
+.button:pressed {
+    -fx-background-color: #ff5079; /* Color más oscuro al presionar */
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #5f6a7a; /* Azul-gris suave para el texto */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: #ffffff; /* Fondo blanco */
+    -fx-border-color: #ffd1e1; /* Borde rosado */
+    -fx-border-radius: 6px;
+    -fx-padding: 6px;
+    -fx-font-size: 14px;
+}
+
+.combo-box:focused {
+    -fx-border-color: #ff8fab; /* Borde rosado más intenso cuando se enfoca */
+}
+
+/* Progress bar */
+.progress-bar {
+    -fx-accent: #ff8fab; /* Rosado para el progreso */
+}
+
+/* ScrollBar */
+.scroll-bar .thumb {
+    -fx-background-color: #ffbad2; /* Color rosado para el scrollbar */
+    -fx-background-radius: 10px;
+}
+
+/* Forzar el estilo del encabezado de la tabla */
+.table-view .column-header-background {
+    -fx-background-color: #ffd1e1 !important; /* Forzamos el color rosado con !important */
+}
+
+.table-view .column-header {
+    -fx-font-weight: bold;
+    -fx-text-fill: #5f6a7a; /* Azul-gris suave para el texto del encabezado */
+    -fx-alignment: CENTER; /* Centrar el texto en el encabezado */
+}
+
+/* Placeholder text (when the table is empty) */
+.table-view .placeholder {
+    -fx-text-fill: #5f6a7a; /* Azul-gris para el texto de marcador de posición */
+    -fx-font-size: 14px;
+}
